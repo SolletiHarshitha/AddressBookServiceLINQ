@@ -62,5 +62,16 @@ namespace AddressBookLINQ
                 Console.WriteLine("\n");
             }
         }
+        //Delete a row in Data Table by Name
+        public void DeleteByName()
+        {
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                if (dataTable.Rows[i][0].ToString() == "Mukesh")
+                {
+                    dataTable.Rows[i].Delete();
+                }
+            }
+        }
     }
 }
