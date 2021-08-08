@@ -81,7 +81,7 @@ namespace AddressBookLINQ
             switch(option)
             {
                 case 1:
-                    Console.WriteLine("Choose a City");
+                    Console.WriteLine("Enter name of the City");
                     string city = Console.ReadLine();
                     var result = dataTable.AsEnumerable().Where(x => x.Field<string>("City").Contains(city));
                     foreach (var contact in result)
@@ -94,7 +94,7 @@ namespace AddressBookLINQ
                     }
                     break;
                 case 2:
-                    Console.WriteLine("Choose a State");
+                    Console.WriteLine("enter name of the State");
                     string state = Console.ReadLine();
                     var res = dataTable.AsEnumerable().Where(x => x.Field<string>("State").Contains(state));
                     foreach (var contact in res)
