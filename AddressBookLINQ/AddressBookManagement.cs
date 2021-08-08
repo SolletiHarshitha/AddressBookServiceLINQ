@@ -9,10 +9,7 @@ namespace AddressBookLINQ
 {
     class AddressBookManagement
     {
-        public AddressBookManagement()
-        {
-            //Creating Data Table
-            DataTable dataTable = new DataTable();
-        }
+        //Create Data Table
+        public readonly DataTable dataTable = new DataTable();
     }
 }
