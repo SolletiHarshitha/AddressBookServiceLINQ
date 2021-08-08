@@ -16,8 +16,8 @@ namespace AddressBookLINQ
             management.DeleteByName();
             management.Display();*/
             //management.RetrieveByCityOrState();
-            management.CountByCityOrState();
-            
+            //management.CountByCityOrState();
+            management.SortNameByCity();
         }
     }
 }
