@@ -9,11 +9,11 @@ namespace AddressBookLINQ
 {
     public class AddressBookManagement
     {
+        //Creating Data Table
+        public readonly DataTable dataTable = new DataTable();
+
         public AddressBookManagement()
         {
-            //Creating Data Table
-            DataTable dataTable = new DataTable();
-
             //Adding Columns to the Data Table
             dataTable.Columns.Add("FirstName");
             dataTable.Columns.Add("LastName");
