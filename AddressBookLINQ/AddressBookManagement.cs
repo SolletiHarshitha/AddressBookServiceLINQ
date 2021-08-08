@@ -28,7 +28,7 @@ namespace AddressBookLINQ
             dataTable.Rows.Add("Koushik", "V", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 9878686765, "koushik@gmail.com");
             dataTable.Rows.Add("Nikitha", "S", "SriSainath Nagar", "Tirupathi", "Andhra Pradesh", 517102, 8939302849, "nikitha@gmail.com");
             dataTable.Rows.Add("Mukesh", "S", "Magunta Layout", "Nellore", "Andhra Pradesh", 524003, 90504039690, "mukesh@gmail.com");
-            dataTable.Rows.Add("Sushmitha", "T", "Kanigiri Road", "Pamur", "Andhra Praesh", 523108, 8494839494, "sushmitha@gmail.com");
+            dataTable.Rows.Add("Sushmitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8494839494, "sushmitha@gmail.com");
             dataTable.Rows.Add("Akhilesh", "S", "Anna Nagar", "Chennai", "Tamil Nadu", 600102, 8393993894, "akhilesh@gmail.com");
             dataTable.Rows.Add("Snehitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8949894859, "snehitha@gmail.com");
             dataTable.Rows.Add("Shanthan", "V", "CMBT", "Chennai", "Tamil Nadu", 600107, 9409490394, "shanthan@gmail.com");
@@ -72,6 +72,42 @@ namespace AddressBookLINQ
                     dataTable.Rows[i].Delete();
                 }
             }
+        }
+        //Retrieve by city or state
+        public void RetrieveByCityOrState()
+        {
+            Console.WriteLine("1.Search by city\n2.Search by State\nChoose an options");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch(option)
+            {
+                case 1:
+                    Console.WriteLine("Choose a City");
+                    string city = Console.ReadLine();
+                    var result = dataTable.AsEnumerable().Where(x => x.Field<string>("City").Contains(city));
+                    foreach (var contact in result)
+                    {
+                        foreach (var data in contact.ItemArray)
+                        {
+                            Console.Write(data + " ");
+                        }
+                        Console.WriteLine("\n");
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Choose a State");
+                    string state = Console.ReadLine();
+                    var res = dataTable.AsEnumerable().Where(x => x.Field<string>("State").Contains(state));
+                    foreach (var contact in res)
+                    {
+                        foreach (var data in contact.ItemArray)
+                        {
+                            Console.Write(data + " ");
+                        }
+                        Console.WriteLine("\n");
+                    }
+                    break;
+            }
+            
         }
     }
 }

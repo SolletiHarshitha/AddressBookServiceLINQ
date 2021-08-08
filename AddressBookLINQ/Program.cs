@@ -9,12 +9,13 @@ namespace AddressBookLINQ
             Console.WriteLine("AddressBook Service Using LINQ");
             AddressBookManagement management = new AddressBookManagement();
 
-            Console.WriteLine("\n--------------Display DataTable------------");
+            /*Console.WriteLine("\n--------------Display DataTable------------");
             management.Display();
 
             Console.WriteLine("\n---------------DataTable After deleting---------");
             management.DeleteByName();
-            management.Display();
+            management.Display();*/
+            management.RetrieveByCityOrState();
             
         }
     }
