@@ -13,8 +13,8 @@ namespace AddressBookLINQ
         public string Address;
         public string City;
         public string State;
-        public string Zip;
-        public string PhoneNumber;
+        public double Zip;
+        public double PhoneNumber;
         public string Email;
     }
 }
