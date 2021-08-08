@@ -35,6 +35,32 @@ namespace AddressBookLINQ
             dataTable.Rows.Add("Bhuvana", "T", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 8943949949, "bhuvana@gmail.com");
             dataTable.Rows.Add("Satya", "T", "MG Road", "Chennai", "Tamil Nadu",600020 , 9484948494, "satya@gmail.com");
             dataTable.Rows.Add("Ajith", "T", "Mogalrajapuram", "Vijaywada", "Andhra Pradesh", 520010, 9904949430, "ajith@gmail.com");
+
+            dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["PhoneNumber"] };
+            
+        }
+        //Edit the Data Table 
+        public void EditByName()
+        {
+            for(int i=0;i<dataTable.Rows.Count;i++)
+            {
+                if(dataTable.Rows[i][0].ToString()=="Mukesh")
+                {
+                    dataTable.Rows[i][0] = "Rajesh";
+                }
+            }
+        }
+        //Display the Data Table
+        public void Display()
+        {
+            foreach (DataRow row in dataTable.Rows)
+            {
+                foreach(DataColumn column in dataTable.Columns)
+                {
+                    Console.Write(row[column] +"\t");
+                }
+                Console.WriteLine("\n");
+            }
         }
     }
 }
