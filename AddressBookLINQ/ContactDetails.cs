@@ -16,5 +16,7 @@ namespace AddressBookLINQ
         public double Zip;
         public double PhoneNumber;
         public string Email;
+        public string AddressBookName;
+        public string ContactType;
     }
 }
