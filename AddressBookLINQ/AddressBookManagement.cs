@@ -28,16 +28,16 @@ namespace AddressBookLINQ
             dataTable.Columns.Add("ContactType");
 
             //Adding Rows to the Data Table
-            dataTable.Rows.Add("Koushik", "V", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 9878686765, "koushik@gmail.com");
-            dataTable.Rows.Add("Nikitha", "S", "SriSainath Nagar", "Tirupathi", "Andhra Pradesh", 517102, 8939302849, "nikitha@gmail.com");
-            dataTable.Rows.Add("Mukesh", "S", "Magunta Layout", "Nellore", "Andhra Pradesh", 524003, 90504039690, "mukesh@gmail.com");
-            dataTable.Rows.Add("Sushmitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8494839494, "sushmitha@gmail.com");
-            dataTable.Rows.Add("Akhilesh", "S", "Anna Nagar", "Chennai", "Tamil Nadu", 600102, 8393993894, "akhilesh@gmail.com");
-            dataTable.Rows.Add("Snehitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8949894859, "snehitha@gmail.com");
-            dataTable.Rows.Add("Shanthan", "V", "CMBT", "Chennai", "Tamil Nadu", 600107, 9409490394, "shanthan@gmail.com");
-            dataTable.Rows.Add("Bhuvana", "T", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 8943949949, "bhuvana@gmail.com");
-            dataTable.Rows.Add("Satya", "T", "MG Road", "Chennai", "Tamil Nadu",600020 , 9484948494, "satya@gmail.com");
-            dataTable.Rows.Add("Ajith", "T", "Mogalrajapuram", "Vijaywada", "Andhra Pradesh", 520010, 9904949430, "ajith@gmail.com");
+            dataTable.Rows.Add("Koushik", "V", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 9878686765, "koushik@gmail.com","Family","Family");
+            dataTable.Rows.Add("Nikitha", "S", "SriSainath Nagar", "Tirupathi", "Andhra Pradesh", 517102, 8939302849, "nikitha@gmail.com","Friend","Friend");
+            dataTable.Rows.Add("Mukesh", "S", "Magunta Layout", "Nellore", "Andhra Pradesh", 524003, 90504039690, "mukesh@gmail.com","Professtion","Profession");
+            dataTable.Rows.Add("Sushmitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8494839494, "sushmitha@gmail.com", "Professtion", "Profession");
+            dataTable.Rows.Add("Akhilesh", "S", "Anna Nagar", "Chennai", "Tamil Nadu", 600102, 8393993894, "akhilesh@gmail.com", "Family", "Family");
+            dataTable.Rows.Add("Snehitha", "T", "Kanigiri Road", "Pamur", "Andhra Pradesh", 523108, 8949894859, "snehitha@gmail.com", "Friend", "Friend");
+            dataTable.Rows.Add("Shanthan", "V", "CMBT", "Chennai", "Tamil Nadu", 600107, 9409490394, "shanthan@gmail.com", "Friend", "Friend");
+            dataTable.Rows.Add("Bhuvana", "T", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 8943949949, "bhuvana@gmail.com", "Family", "Family");
+            dataTable.Rows.Add("Satya", "T", "MG Road", "Chennai", "Tamil Nadu",600020 , 9484948494, "satya@gmail.com", "Friend", "Friend");
+            dataTable.Rows.Add("Ajith", "T", "Mogalrajapuram", "Vijaywada", "Andhra Pradesh", 520010, 9904949430, "ajith@gmail.com", "Professtion", "Profession");
 
             dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["PhoneNumber"] };
             
