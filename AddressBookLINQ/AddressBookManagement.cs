@@ -23,6 +23,9 @@ namespace AddressBookLINQ
             dataTable.Columns.Add("Zip");
             dataTable.Columns.Add("PhoneNumber");
             dataTable.Columns.Add("Email");
+            //Adding AddressBookName and Type
+            dataTable.Columns.Add("AddressBookName");
+            dataTable.Columns.Add("ContactType");
 
             //Adding Rows to the Data Table
             dataTable.Rows.Add("Koushik", "V", "TekkaMitta", "Nellore", "Andhra Pradesh", 524003, 9878686765, "koushik@gmail.com");
