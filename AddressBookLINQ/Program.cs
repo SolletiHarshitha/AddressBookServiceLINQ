@@ -11,6 +11,7 @@ namespace AddressBookLINQ
 
             Console.WriteLine("\n--------------Display DataTable------------");
             management.Display();
+            management.RetrieveCountByType();
 
             
         }

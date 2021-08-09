@@ -151,6 +151,19 @@ namespace AddressBookLINQ
                 }
                 Console.WriteLine("\n");
             }
+        } 
+        //Retrieve Count by Type
+        public void RetrieveCountByType()
+        {
+            string str = null;
+            var result = (from ContactDetails in dataTable.AsEnumerable()
+                          .GroupBy(x => new { ContactType = x["ContactType"] })
+                          select ContactDetails);
+            foreach(var res in result)
+            {
+                str = res.Count() + " ";
+                Console.WriteLine("Count of {0} is {1}",res.Key,str);
+            }
         }
     }
 }
